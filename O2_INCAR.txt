@@ -1,0 +1,39 @@
+SYSTEM        =      NFMO_O2
+NWRITE        =      2
+PREC          =    ACCURATE
+ISTART        =      1
+ICHARG        =      1
+LASPH         =     .TRUE. ! if we have d electronsin the system it is good to include this tag
+
+!Magnetism
+
+ISPIN         =      2
+MAGMOM        =  8*0.1 18*4.2 18*3.2 72*0.1 
+LORBIT        =      11
+
+!Electronic Optimization
+
+ENCUT         =      680
+SIGMA         =      0.05
+ISMEAR        =       0
+NELM          =      350
+NELMIN        =       2
+!NELMDL       =       8
+LREAL         =     AUTO
+
+!Ionic relaxation
+
+NSW           =       0
+IBRION        =       -1
+ISIF          =       3
+EDIFF         =     1.0E-05
+EDIFFG        =     -0.01
+
+
+ADDGRID       =    .TRUE.
+NCORE         =       2
+!ISYM          =      -1 !use this one for remove symmetry and it slow down 
+
+!SCAN
+METAGGA       =     R2SCAN
+LMAXMIX       =       6
